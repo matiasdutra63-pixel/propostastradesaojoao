@@ -68,16 +68,31 @@ export default function ClientShell({
 
   const NavItem = ({ href, label }: { href: string; label: string }) => {
     const active = pathname === href || pathname?.startsWith(href + "/");
+
     return (
-      <Link
+      <a
         href={href}
+        onClick={(e) => {
+          const isDirty = sessionStorage.getItem("dirty_proposta") === "1";
+          if (isDirty) {
+            const ok = confirm(
+              "Você tem alterações não salvas. Deseja sair mesmo assim?"
+            );
+            if (!ok) {
+              e.preventDefault();
+              return;
+            }
+            // se confirmou, limpa o flag pra não ficar alertando
+            sessionStorage.removeItem("dirty_proposta");
+          }
+        }}
         className={[
           "block rounded-xl px-3 py-2 text-sm font-semibold transition-colors",
           active ? "bg-blue-600 text-white" : "text-gray-700 hover:bg-gray-100",
         ].join(" ")}
       >
         {label}
-      </Link>
+      </a>
     );
   };
 
