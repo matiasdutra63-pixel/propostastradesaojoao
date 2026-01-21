@@ -20,24 +20,96 @@ export default function AcoesPage() {
   const [filtro, setFiltro] = useState("");
   const [areaFiltro, setAreaFiltro] = useState<string>("todas");
 
-  // ✅ Carrega email + ações no client (sem mounted)
-  useEffect(() => {
-    const e = localStorage.getItem("email") || "";
-    setEmail(e);
-
-    try {
-      const salvas = JSON.parse(localStorage.getItem("acoes") || "[]");
-      setAcoes(Array.isArray(salvas) ? salvas : []);
-    } catch {
-      setAcoes([]);
-    }
-  }, []);
-
   const moeda = (v: number) =>
     (Number(v) || 0).toLocaleString("pt-BR", {
       style: "currency",
       currency: "BRL",
     });
+
+  // ✅ Parser de valor robusto: "R$ 18.000,00" / "18000" / "18.000" / "18,000.50"
+  function parseValor(input: string) {
+    const s = (input || "").toString().toLowerCase().trim();
+    if (!s) return 0;
+    if (s.includes("sob consulta")) return 0;
+
+    let cleaned = s.replace("r$", "").replace(/\s/g, "");
+
+    const hasComma = cleaned.includes(",");
+    const hasDot = cleaned.includes(".");
+
+    if (hasComma && hasDot) {
+      const lastComma = cleaned.lastIndexOf(",");
+      const lastDot = cleaned.lastIndexOf(".");
+      if (lastComma > lastDot) {
+        cleaned = cleaned.replace(/\./g, "").replace(",", ".");
+      } else {
+        cleaned = cleaned.replace(/,/g, "");
+      }
+    } else if (hasComma && !hasDot) {
+      cleaned = cleaned.replace(",", ".");
+    } else {
+      const parts = cleaned.split(".");
+      if (parts.length === 2 && parts[1].length === 3) {
+        cleaned = cleaned.replace(".", "");
+      }
+    }
+
+    const n = Number(cleaned);
+    return isNaN(n) ? 0 : n;
+  }
+
+  const salvarAcoes = (novas: Acao[]) => {
+    localStorage.setItem("acoes", JSON.stringify(novas));
+    setAcoes(novas);
+  };
+
+  // ✅ Carrega ações: primeiro localStorage, se vazio busca do /public/acoes.json
+  useEffect(() => {
+    const e = localStorage.getItem("email") || "";
+    setEmail(e);
+
+    const carregar = async () => {
+      // 1) tenta localStorage
+      try {
+        const salvas = JSON.parse(localStorage.getItem("acoes") || "[]");
+        if (Array.isArray(salvas) && salvas.length > 0) {
+          setAcoes(salvas);
+          return;
+        }
+      } catch {
+        // segue para o fetch
+      }
+
+      // 2) fallback: busca do arquivo público
+      try {
+        const resp = await fetch("/acoes.json", { cache: "no-store" });
+        if (!resp.ok) throw new Error("Falha ao buscar /acoes.json");
+        const data = await resp.json();
+
+        const arr = Array.isArray(data) ? data : [];
+        const normalizadas: Acao[] = arr
+          .map((a: any) => ({
+            id: String(a?.id || crypto.randomUUID()),
+            area: String(a?.area || "Geral"),
+            nome: String(a?.nome || "—"),
+            valor: Number(a?.valor) || 0,
+            observacoes: a?.observacoes ? String(a.observacoes) : "",
+          }))
+          .filter((a) => a.nome.trim().length > 0);
+
+        setAcoes(normalizadas);
+
+        // ✅ salva como cache pro resto do app enxergar
+        if (normalizadas.length > 0) {
+          localStorage.setItem("acoes", JSON.stringify(normalizadas));
+        }
+      } catch {
+        setAcoes([]);
+      }
+    };
+
+    carregar();
+  }, []);
 
   const areas = useMemo(() => {
     const set = new Set<string>();
@@ -76,11 +148,6 @@ export default function AcoesPage() {
     return soma / validas.length;
   }, [acoes]);
 
-  const salvarAcoes = (novas: Acao[]) => {
-    localStorage.setItem("acoes", JSON.stringify(novas));
-    setAcoes(novas);
-  };
-
   const removerAcao = (id: string) => {
     if (!isAdmin) {
       alert("Somente o admin pode excluir ações.");
@@ -91,48 +158,6 @@ export default function AcoesPage() {
 
     salvarAcoes(acoes.filter((a) => a.id !== id));
   };
-
-  // ✅ Parser de valor robusto: "R$ 18.000,00" / "18000" / "18.000" / "18,000.50"
-  function parseValor(input: string) {
-    const s = (input || "").toString().toLowerCase().trim();
-    if (!s) return 0;
-    if (s.includes("sob consulta")) return 0;
-
-    // tira R$, espaços e símbolos
-    let cleaned = s.replace("r$", "").replace(/\s/g, "");
-
-    // se vier no padrão BR (18.000,00) -> remove pontos e troca vírgula por ponto
-    // se vier no padrão US (18,000.50) -> remove vírgulas
-    const hasComma = cleaned.includes(",");
-    const hasDot = cleaned.includes(".");
-
-    if (hasComma && hasDot) {
-      // decide pelo último separador como decimal
-      const lastComma = cleaned.lastIndexOf(",");
-      const lastDot = cleaned.lastIndexOf(".");
-      if (lastComma > lastDot) {
-        // 18.000,00
-        cleaned = cleaned.replace(/\./g, "").replace(",", ".");
-      } else {
-        // 18,000.50
-        cleaned = cleaned.replace(/,/g, "");
-      }
-    } else if (hasComma && !hasDot) {
-      // 18000,50
-      cleaned = cleaned.replace(",", ".");
-    } else {
-      // 18.000 ou 18000.50 -> remove separador de milhar só se fizer sentido
-      // aqui, manter ponto como decimal
-      // se for "18.000" (milhar), fica ambíguo; assume milhar:
-      const parts = cleaned.split(".");
-      if (parts.length === 2 && parts[1].length === 3) {
-        cleaned = cleaned.replace(".", "");
-      }
-    }
-
-    const n = Number(cleaned);
-    return isNaN(n) ? 0 : n;
-  }
 
   // ✅ Importação CSV (admin)
   // Aceita:
@@ -147,7 +172,6 @@ export default function AcoesPage() {
 
     const text = await file.text();
 
-    // detecta separador mais provável
     const firstLine =
       text.split(/\r?\n/).find((l) => l.trim().length > 0) || "";
     const sep = firstLine.includes(";")
@@ -165,7 +189,6 @@ export default function AcoesPage() {
     const novas: Acao[] = [];
 
     for (const line of lines) {
-      // quebra colunas e remove aspas externas
       const cols = line
         .split(sep)
         .map((c) => c.trim().replace(/^"|"$/g, "").trim())
@@ -173,7 +196,6 @@ export default function AcoesPage() {
 
       if (cols.length === 0) continue;
 
-      // pular cabeçalho comum
       const lower = cols.join(" ").toLowerCase();
       if (
         lower.includes("area") &&
@@ -185,13 +207,11 @@ export default function AcoesPage() {
         continue;
       }
 
-      // Linha de área (1 coluna)
       if (cols.length === 1) {
         areaAtual = cols[0].trim();
         continue;
       }
 
-      // Formato: Area;Nome;Valor;Obs
       if (cols.length >= 4) {
         const area = cols[0].trim() || areaAtual || "Geral";
         const nome = cols[1].trim();
@@ -208,7 +228,6 @@ export default function AcoesPage() {
         continue;
       }
 
-      // Formato: Nome;Valor;Obs  (usa areaAtual)
       if (cols.length >= 2) {
         const nome = cols[0].trim();
         const valor = parseValor(cols[1]);
@@ -224,7 +243,6 @@ export default function AcoesPage() {
       }
     }
 
-    // Mantém somente válidas
     const filtradas = novas.filter(
       (a) => a.nome?.trim() && typeof a.valor === "number" && !isNaN(a.valor)
     );
@@ -236,6 +254,27 @@ export default function AcoesPage() {
 
     salvarAcoes(filtradas);
     alert(`Importado com sucesso: ${filtradas.length} ações.`);
+  };
+
+  const recarregar = async () => {
+    // tenta localStorage primeiro
+    try {
+      const salvas = JSON.parse(localStorage.getItem("acoes") || "[]");
+      if (Array.isArray(salvas) && salvas.length > 0) {
+        setAcoes(salvas);
+        return;
+      }
+    } catch {}
+
+    // fallback public
+    try {
+      const resp = await fetch("/acoes.json", { cache: "no-store" });
+      const data = await resp.json();
+      const arr = Array.isArray(data) ? data : [];
+      setAcoes(arr);
+    } catch {
+      setAcoes([]);
+    }
   };
 
   return (
@@ -354,16 +393,7 @@ export default function AcoesPage() {
           </div>
 
           <button
-            onClick={() => {
-              try {
-                const salvas = JSON.parse(
-                  localStorage.getItem("acoes") || "[]"
-                );
-                setAcoes(Array.isArray(salvas) ? salvas : []);
-              } catch {
-                setAcoes([]);
-              }
-            }}
+            onClick={recarregar}
             className="text-sm font-semibold px-4 py-2 rounded-lg border border-gray-200 hover:bg-gray-50"
           >
             Atualizar
@@ -412,7 +442,7 @@ export default function AcoesPage() {
                   !isNaN(acao.valor) &&
                   acao.valor > 0
                     ? moeda(acao.valor)
-                    : "—"}
+                    : "Sob consulta"}
                 </td>
 
                 <td className="border-b border-gray-100 p-3 text-gray-600">
@@ -447,23 +477,6 @@ export default function AcoesPage() {
           </tbody>
         </table>
       </div>
-
-      {/* Dica de formato CSV */}
-      {isAdmin && (
-        <div className="text-sm text-gray-500">
-          <span className="font-semibold text-gray-700">Dica CSV:</span> Você
-          pode usar uma linha com <b>Área</b> sozinha para definir a área, e
-          abaixo listar <b>Nome;Valor;Observações</b>.
-          <div className="mt-2 font-mono text-xs bg-white border border-gray-200 rounded-xl p-3">
-            ENCARTE
-            <br />
-            Rodapé 4 itens;18000;Validade 30 dias
-            <br />
-            Meia página 8 itens;25000;120 mil impressões
-            <br />
-          </div>
-        </div>
-      )}
     </div>
   );
 }

@@ -86,13 +86,34 @@ export default function NovaPropostaPage() {
       return;
     }
 
-    try {
-      const salvas = localStorage.getItem("acoes");
-      const parsed = salvas ? JSON.parse(salvas) : [];
-      setAcoesBase(Array.isArray(parsed) ? parsed : []);
-    } catch {
-      setAcoesBase([]);
-    }
+    const carregarAcoes = async () => {
+      // 1) localStorage
+      try {
+        const salvas = localStorage.getItem("acoes");
+        const parsed = salvas ? JSON.parse(salvas) : [];
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          setAcoesBase(parsed);
+          return;
+        }
+      } catch {}
+
+      // 2) fallback /public/acoes.json
+      try {
+        const resp = await fetch("/acoes.json", { cache: "no-store" });
+        const data = await resp.json();
+        const arr = Array.isArray(data) ? data : [];
+        setAcoesBase(arr);
+
+        // cache
+        if (arr.length > 0) {
+          localStorage.setItem("acoes", JSON.stringify(arr));
+        }
+      } catch {
+        setAcoesBase([]);
+      }
+    };
+
+    carregarAcoes();
   }, [router]);
 
   const qtdMeses = (arr: number[]) => (Array.isArray(arr) ? arr.length : 0);

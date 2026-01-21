@@ -133,79 +133,104 @@ export default function EditarPropostaPage() {
   useEffect(() => {
     if (!propostaId) return;
 
-    // ações base
-    try {
-      const salvas = localStorage.getItem("acoes");
-      const parsed = salvas ? JSON.parse(salvas) : [];
-      setAcoesBase(Array.isArray(parsed) ? parsed : []);
-    } catch {
-      setAcoesBase([]);
-    }
+    const carregarTudo = async () => {
+      try {
+        // Ações base (para adicionar novas)
+        try {
+          const salvas = localStorage.getItem("acoes");
+          const parsed = salvas ? JSON.parse(salvas) : [];
 
-    // proposta
-    try {
-      const propostas = JSON.parse(localStorage.getItem("propostas") || "[]");
-      const achou = propostas.find((p: any) => p.id === propostaId);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            setAcoesBase(parsed);
+          } else {
+            const resp = await fetch("/acoes.json", { cache: "no-store" });
+            if (!resp.ok) throw new Error("Falha ao buscar /acoes.json");
+            const data = await resp.json();
+            const arr = Array.isArray(data) ? data : [];
 
-      if (!achou) {
-        alert("Proposta não encontrada.");
-        router.push("/proposta");
-        return;
+            setAcoesBase(arr);
+
+            if (arr.length > 0) {
+              localStorage.setItem("acoes", JSON.stringify(arr));
+            }
+          }
+        } catch {
+          setAcoesBase([]);
+        }
+
+        // proposta
+        try {
+          const propostas = JSON.parse(
+            localStorage.getItem("propostas") || "[]"
+          );
+          const achou = propostas.find((p: any) => p.id === propostaId);
+
+          if (!achou) {
+            alert("Proposta não encontrada.");
+            router.push("/proposta");
+            return;
+          }
+
+          setNomeProposta(String(achou.nome || ""));
+
+          const acoes: any[] = Array.isArray(achou.acoes) ? achou.acoes : [];
+
+          const normalizadas: AcaoProposta[] = acoes.map((a) => {
+            const raw: any = a;
+
+            const meses = Array.isArray(raw.mesesSelecionados)
+              ? raw.mesesSelecionados
+                  .map((x: any) => Number(x))
+                  .filter((x: any) => Number.isFinite(x))
+              : [];
+
+            const desconto = normalizarNumero(raw.desconto) || 0;
+
+            // ✅ lê lojas de qualquer nome antigo possível
+            const lojasRaw =
+              raw.lojas ??
+              raw.qtdLojas ??
+              raw.quantidadeLojas ??
+              raw.lojasQuantidade ??
+              raw.lojasInfo ??
+              0;
+
+            const lojas = Math.max(
+              0,
+              Math.floor(normalizarNumero(lojasRaw) || 0)
+            );
+
+            const valorBase = normalizarNumero(raw.valor) || 0;
+            const valorDigitado = normalizarNumero(raw.valorDigitado) || 0;
+
+            const item: AcaoProposta = {
+              id: String(raw.id || crypto.randomUUID()),
+              area: String(raw.area || "—"),
+              nome: String(raw.nome || "—"),
+              valor: valorBase,
+              observacoes: raw.observacoes ? String(raw.observacoes) : "",
+              mesesSelecionados: meses,
+              desconto,
+              lojas,
+              valorDigitado: valorBase > 0 ? undefined : valorDigitado,
+              valorFinal: 0,
+            };
+
+            return { ...item, valorFinal: recalcularValorFinal(item) };
+          });
+
+          setAcoesProposta(normalizadas);
+        } catch {
+          alert("Erro ao carregar proposta.");
+          router.push("/proposta");
+          return;
+        }
+      } finally {
+        setCarregando(false);
       }
+    };
 
-      setNomeProposta(String(achou.nome || ""));
-
-      const acoes: any[] = Array.isArray(achou.acoes) ? achou.acoes : [];
-
-      const normalizadas: AcaoProposta[] = acoes.map((a) => {
-        const raw: any = a;
-
-        const meses = Array.isArray(raw.mesesSelecionados)
-          ? raw.mesesSelecionados
-              .map((x: any) => Number(x))
-              .filter((x: any) => Number.isFinite(x))
-          : [];
-
-        const desconto = normalizarNumero(raw.desconto) || 0;
-
-        // ✅ lê lojas de qualquer nome antigo possível
-        const lojasRaw =
-          raw.lojas ??
-          raw.qtdLojas ??
-          raw.quantidadeLojas ??
-          raw.lojasQuantidade ??
-          raw.lojasInfo ??
-          0;
-
-        const lojas = Math.max(0, Math.floor(normalizarNumero(lojasRaw) || 0));
-
-        const valorBase = normalizarNumero(raw.valor) || 0;
-        const valorDigitado = normalizarNumero(raw.valorDigitado) || 0;
-
-        const item: AcaoProposta = {
-          id: String(raw.id || crypto.randomUUID()),
-          area: String(raw.area || "—"),
-          nome: String(raw.nome || "—"),
-          valor: valorBase,
-          observacoes: raw.observacoes ? String(raw.observacoes) : "",
-          mesesSelecionados: meses,
-          desconto,
-          lojas,
-          valorDigitado: valorBase > 0 ? undefined : valorDigitado,
-          valorFinal: 0, // recalcula abaixo
-        };
-
-        return { ...item, valorFinal: recalcularValorFinal(item) };
-      });
-
-      setAcoesProposta(normalizadas);
-    } catch {
-      alert("Erro ao carregar proposta.");
-      router.push("/proposta");
-      return;
-    } finally {
-      setCarregando(false);
-    }
+    carregarTudo();
   }, [propostaId, router]);
 
   // ✅ adicionar ação

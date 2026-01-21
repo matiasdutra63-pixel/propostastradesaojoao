@@ -36,6 +36,22 @@ export default function ClientShell({
       router.replace("/login");
     }
   }, [isAuthPage, router]);
+  // ✅ Carrega ações padrão do /public/acoes.json se o usuário ainda não tiver ações no localStorage
+  useEffect(() => {
+    try {
+      const jaTem = localStorage.getItem("acoes");
+      if (jaTem) return;
+
+      fetch("/acoes.json")
+        .then((r) => r.json())
+        .then((data) => {
+          if (Array.isArray(data) && data.length > 0) {
+            localStorage.setItem("acoes", JSON.stringify(data));
+          }
+        })
+        .catch(() => {});
+    } catch {}
+  }, []);
 
   // ✅ Em /login e /cadastro, não mostra nada de dashboard
   if (isAuthPage) return <>{children}</>;

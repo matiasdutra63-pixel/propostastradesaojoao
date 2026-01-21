@@ -1,0 +1,1101 @@
+[
+  {
+    "id": "1",
+    "area": "PDV",
+    "nome": "PDV e mídia impressa - lâmina exclusiva",
+    "valor": 0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "09c8983b-8201-4e23-9a1b-de8d24f1f7f9",
+    "area": "PDV",
+    "nome": "PONTA DE GONDOLA",
+    "valor": 1350.0,
+    "observacoes": ""
+  },
+  {
+    "id": "83648ddd-334e-4ace-bb3e-269c8068acf7",
+    "area": "PDV",
+    "nome": "MEIA PONTA",
+    "valor": 800.0,
+    "observacoes": ""
+  },
+  {
+    "id": "bc8ba0e3-7c28-4320-95df-3824335a9bd6",
+    "area": "PDV",
+    "nome": "PRATELEIRA DE BALCÃO",
+    "valor": 1000.0,
+    "observacoes": ""
+  },
+  {
+    "id": "77686374-6f03-4ae8-8950-016585d44092",
+    "area": "PDV",
+    "nome": "CHECKOUT  AMADEIRADO (1 PRATELEIRA)",
+    "valor": 450.0,
+    "observacoes": ""
+  },
+  {
+    "id": "72167c41-cf2d-4929-aa36-8acb3388408c",
+    "area": "PDV",
+    "nome": "CHECKOUT  AMADEIRADO (2 PRATELEIRA)",
+    "valor": 420.0,
+    "observacoes": ""
+  },
+  {
+    "id": "ba2259f5-d680-447e-9ac9-0a9b3a49bc73",
+    "area": "PDV",
+    "nome": "CHECKOUT  AMADEIRADO (3 PRATELEIRA)",
+    "valor": 400.0,
+    "observacoes": ""
+  },
+  {
+    "id": "88924a81-6b91-4b27-9116-0f9e6be3a9f6",
+    "area": "PDV",
+    "nome": "CHECKOUT  AMADEIRADO (4 PRATELEIRA)",
+    "valor": 350.0,
+    "observacoes": ""
+  },
+  {
+    "id": "e43c992e-4460-4d5b-a17e-8fc104fb1edb",
+    "area": "PDV",
+    "nome": "CHECKOUT  AMADEIRADO (5 PRATELEIRA)",
+    "valor": 300.0,
+    "observacoes": ""
+  },
+  {
+    "id": "67d0c02a-dfd6-4d95-bdc4-a4a4be51ec6b",
+    "area": "PDV",
+    "nome": "CHECKOUT LATA (1 PRATELEIRA)",
+    "valor": 600.0,
+    "observacoes": ""
+  },
+  {
+    "id": "6a59e34a-fd9c-4af4-a303-028fd7282b0d",
+    "area": "PDV",
+    "nome": "CHECKOUT LATA (2 PRATELEIRA)",
+    "valor": 550.0,
+    "observacoes": ""
+  },
+  {
+    "id": "48ad81fc-fa35-4237-992a-574f7893b123",
+    "area": "PDV",
+    "nome": "CHECKOUT LATA (3 PRATELEIRA)",
+    "valor": 440.0,
+    "observacoes": ""
+  },
+  {
+    "id": "80d79e38-8fa4-4b1c-a83e-517410780d05",
+    "area": "PDV",
+    "nome": "CLIP STRIP SÃO JOÃO",
+    "valor": 180.0,
+    "observacoes": ""
+  },
+  {
+    "id": "c8650278-1ca1-4f59-be2c-01f9ea2a0db5",
+    "area": "PDV",
+    "nome": "CLIP STRIP",
+    "valor": 270.0,
+    "observacoes": ""
+  },
+  {
+    "id": "a534f703-e340-4d06-8e50-946beb222d64",
+    "area": "PDV",
+    "nome": "WOBLER",
+    "valor": 60.0,
+    "observacoes": ""
+  },
+  {
+    "id": "38b01766-39cb-4300-a338-5f552a8c157c",
+    "area": "PDV",
+    "nome": "TOP SELLING",
+    "valor": 10000.0,
+    "observacoes": ""
+  },
+  {
+    "id": "be6111d1-f649-41ed-903e-81c0dc9abd0b",
+    "area": "PDV",
+    "nome": "BALCÃO VITRINE",
+    "valor": 850.0,
+    "observacoes": ""
+  },
+  {
+    "id": "b33c6d43-744e-4fb7-ac6b-a955b2073ff8",
+    "area": "PDV",
+    "nome": "DISPLAY DE PONTO NATURAL ATÉ 30 CM",
+    "valor": 150.0,
+    "observacoes": ""
+  },
+  {
+    "id": "e78582db-4bae-45e5-84d4-a82f0f4f52e4",
+    "area": "PDV",
+    "nome": "DISPLAY DE PONTO NATURAL ACIMA DE 30 CM",
+    "valor": 200.0,
+    "observacoes": ""
+  },
+  {
+    "id": "b8abc8ea-5532-4517-bc02-fe8fb7123793",
+    "area": "PDV",
+    "nome": "DISPLAY CHÃO DE FRALDAS",
+    "valor": 850.0,
+    "observacoes": ""
+  },
+  {
+    "id": "83e45ff5-27f0-4efe-bdcb-25f26f2bfd45",
+    "area": "PDV",
+    "nome": "DISPLAY DE CHÃO",
+    "valor": 950.0,
+    "observacoes": ""
+  },
+  {
+    "id": "43cb8e10-e462-4bd4-a9ae-769ed71fc69c",
+    "area": "PDV",
+    "nome": "FAIXA DE GONDOLA",
+    "valor": 50.0,
+    "observacoes": ""
+  },
+  {
+    "id": "fb4f1e0a-c3ad-4e9b-9220-0e84bc362cb0",
+    "area": "PDV",
+    "nome": "STOPPER",
+    "valor": 55.0,
+    "observacoes": ""
+  },
+  {
+    "id": "2b7b800f-0f0c-45aa-a040-860a2c3a255e",
+    "area": "PDV",
+    "nome": "DESCARTE DE MEDICAMENTOS",
+    "valor": 500.0,
+    "observacoes": ""
+  },
+  {
+    "id": "6b281b52-cbb5-4362-b9ff-b21831928a35",
+    "area": "PDV",
+    "nome": "DISPLAY DE RX",
+    "valor": 600.0,
+    "observacoes": ""
+  },
+  {
+    "id": "5af7d89b-ca90-44b4-a863-0f1e5dbe8390",
+    "area": "PDV",
+    "nome": "ORELHA DE MONITOR",
+    "valor": 160.0,
+    "observacoes": ""
+  },
+  {
+    "id": "b30f6e5a-94c6-4f90-a84e-0da15ac23326",
+    "area": "PDV",
+    "nome": "VITRINE",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "e6193d65-7556-4fe2-9f18-ef39dbb774da",
+    "area": "PDV",
+    "nome": "ADESIVO DE VITRINE",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "9929651e-24db-46d5-86ac-1d0b578f2c91",
+    "area": "PDV",
+    "nome": "PONTA DE MAQUIAGEM + IMAGEM PERS",
+    "valor": 500.0,
+    "observacoes": ""
+  },
+  {
+    "id": "ce21fa46-596f-43c4-910a-1ed5a0193f15",
+    "area": "PDV",
+    "nome": "MEIA PONTA DE MAQUIAGEM + IMAGEM PERS",
+    "valor": 350.0,
+    "observacoes": ""
+  },
+  {
+    "id": "3d11ee7c-949a-4fa1-bc63-153c33d8fb86",
+    "area": "PDV",
+    "nome": "TESTEIRA DE DERMO",
+    "valor": 400.0,
+    "observacoes": ""
+  },
+  {
+    "id": "39df69c5-96c9-4a34-b084-f710e586da1b",
+    "area": "PDV",
+    "nome": "PALLET DE LEITES",
+    "valor": 460.0,
+    "observacoes": ""
+  },
+  {
+    "id": "5bcbca14-fb58-4475-86cf-9033aa65e5fc",
+    "area": "PDV",
+    "nome": "CESTO DE OFERTAS",
+    "valor": 870.0,
+    "observacoes": ""
+  },
+  {
+    "id": "270a908b-df27-4e38-bcff-fabbba0b0fc1",
+    "area": "PDV",
+    "nome": "BALCAO VENDEDOR (1 PRATELEIRA)",
+    "valor": 100.0,
+    "observacoes": ""
+  },
+  {
+    "id": "efdd363b-189d-49a9-abd1-ca5cc256e52b",
+    "area": "PDV",
+    "nome": "BALCAO VENDEDOR (2 PRATELEIRA)",
+    "valor": 85.0,
+    "observacoes": ""
+  },
+  {
+    "id": "426d09ed-ea9d-47c5-aae6-3e6342ce8a9d",
+    "area": "PDV",
+    "nome": "BALCAO VENDEDOR (3 PRATELEIRA)",
+    "valor": 80.0,
+    "observacoes": ""
+  },
+  {
+    "id": "6f6d4261-b9ff-4da5-9b9f-1f0182e6b163",
+    "area": "PDV",
+    "nome": "BALCAO VENDEDOR (4 PRATELEIRA)",
+    "valor": 40.0,
+    "observacoes": ""
+  },
+  {
+    "id": "20f71632-df6d-44cc-9193-6f7920d27135",
+    "area": "PDV",
+    "nome": "LEVE JUNTO",
+    "valor": 490.0,
+    "observacoes": ""
+  },
+  {
+    "id": "731b9252-45cf-4d4b-8e0a-d29e874c5a95",
+    "area": "RETAIL MEDIA",
+    "nome": "PONTA DE GONDOLA XP",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "ac5726a2-d205-4a3e-be1e-1943138fe217",
+    "area": "RETAIL MEDIA",
+    "nome": "TELA DE AUTOSSERVIÇO",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "4d6c6553-ade3-466f-bbe8-26e2b8a89388",
+    "area": "RETAIL MEDIA",
+    "nome": "TELA DERMO",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "a04e9692-7ca7-45f7-a870-9658f2bcbfbb",
+    "area": "RETAIL MEDIA",
+    "nome": "TELA CHECKOUT",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "c401e101-e390-49be-9097-c61318d0ec33",
+    "area": "RETAIL MEDIA",
+    "nome": "TV INDOOR",
+    "valor": 1500.0,
+    "observacoes": ""
+  },
+  {
+    "id": "a1d282be-f020-437f-a4a5-b6945c688939",
+    "area": "RETAIL MEDIA",
+    "nome": "PAINEL LED (LOJA)",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "817fd031-e76f-48cc-bc7d-84b837762d86",
+    "area": "RETAIL MEDIA",
+    "nome": "LEITOR DE PREÇO (0 A 100 LOJAS)",
+    "valor": 150.0,
+    "observacoes": ""
+  },
+  {
+    "id": "7b8f92f4-e501-447b-b012-e93d4596cae2",
+    "area": "RETAIL MEDIA",
+    "nome": "LEITOR DE PREÇO (101 A 499 LOJAS)",
+    "valor": 100.0,
+    "observacoes": ""
+  },
+  {
+    "id": "591fcad0-4fcf-471c-88af-6c30423b1de7",
+    "area": "RETAIL MEDIA",
+    "nome": "LEITOR DE PREÇO (ACIMA DE 500 LOJAS)",
+    "valor": 50.0,
+    "observacoes": ""
+  },
+  {
+    "id": "3924742e-c849-4dc1-a79a-524236d8d51d",
+    "area": "RETAIL MEDIA",
+    "nome": "PAINEL LED OUTDOOR FACHADA",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "a2758669-3c68-44e7-af4a-9fb21c623a75",
+    "area": "MIDIA OOH",
+    "nome": "OUTDOOR",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "d8e7a1dc-7315-411a-b77e-80ae227dc48b",
+    "area": "MIDIA OOH",
+    "nome": "BANCAS DE REVISTA",
+    "valor": 60000.0,
+    "observacoes": ""
+  },
+  {
+    "id": "b173abd0-be7d-4eec-a1ef-da89c64f914a",
+    "area": "MIDIA OOH",
+    "nome": "PAINEL LED 3D",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "25d49782-0425-417f-93c9-4919b66b0635",
+    "area": "MIDIA OOH",
+    "nome": "PEDÁGIOS NA SERRA GAÚCHA",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "16284d32-b51e-4ceb-9c92-5fbd66db9218",
+    "area": "MIDIA OOH",
+    "nome": "MUB LITORAL",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "1d26390c-de80-44a3-a39a-9a34a109e56e",
+    "area": "MIDIA OOH",
+    "nome": "MEGA PAINEL 30X10",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "fa085990-8f81-4c82-8274-0364982ab6cd",
+    "area": "MIDIA OOH",
+    "nome": "FREEWAY 20X6",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "e9ac1d94-2772-44ef-bd7b-2f2b2bd4fa25",
+    "area": "MIDIA OOH",
+    "nome": "FREEWAY 20X4 ANTES DO PEDÁGIO",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "b5563fd8-d9d5-4230-994e-751225aa54fa",
+    "area": "MIDIA OOH",
+    "nome": "MEGAMUB PAINEL LED",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "ced14b2d-fc40-444d-85d5-6772bfdc0592",
+    "area": "MIDIA OOH",
+    "nome": "FRONT LIGHT",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "2998205f-c1de-464e-843d-829438729fc0",
+    "area": "MIDIA OOH",
+    "nome": "SEQUENCIAL KM 10",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "b968ab60-ea67-4feb-866e-79f17e571651",
+    "area": "MIDIA OOH",
+    "nome": "MARCADORES DE KM",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "8ec057bc-f8f2-4c87-8f75-80f80d524832",
+    "area": "MIDIA OOH",
+    "nome": "RELÓGIOS DIGITAIS",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "7a2db584-52ca-435f-8075-b1cf536ea570",
+    "area": "MIDIA OOH",
+    "nome": "MUBS DIGITAIS",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "42f24530-2ef8-433d-ac34-ac6db4a56419",
+    "area": "MIDIA DE MASSA",
+    "nome": "RADIO",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "ea208d55-87d9-4b3f-b5cf-9b7071471bcb",
+    "area": "MIDIA DE MASSA",
+    "nome": "TV",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "29305c47-ef5d-4ef6-a160-628c76973145",
+    "area": "MIDIA IMPRESSA",
+    "nome": "PÁGINA INTEIRA",
+    "valor": 45000.0,
+    "observacoes": ""
+  },
+  {
+    "id": "ebeac4aa-3e10-41fa-9c34-ba2f3196ab0f",
+    "area": "MIDIA IMPRESSA",
+    "nome": "ENCARTE MEIA PÁGINA",
+    "valor": 25000.0,
+    "observacoes": ""
+  },
+  {
+    "id": "04077950-7928-4bca-bcaa-03601d388d6f",
+    "area": "MIDIA IMPRESSA",
+    "nome": "ENCARTE RODAPÉ",
+    "valor": 18000.0,
+    "observacoes": ""
+  },
+  {
+    "id": "d8d27f9a-d531-46ef-b7d4-455a4c2b7b06",
+    "area": "MIDIA IMPRESSA",
+    "nome": "LISTA DE MEDICAMENTOS",
+    "valor": 15000.0,
+    "observacoes": ""
+  },
+  {
+    "id": "d1003a4a-2caa-4744-9577-60e8393807cd",
+    "area": "MIDIA IMPRESSA",
+    "nome": "AVULSO",
+    "valor": 5000.0,
+    "observacoes": ""
+  },
+  {
+    "id": "aff11123-4750-40a3-b9c2-7abc1546cf9e",
+    "area": "MIDIA IMPRESSA",
+    "nome": "LÃMINA EXCLUSIVA",
+    "valor": 10000.0,
+    "observacoes": ""
+  },
+  {
+    "id": "ac3d743c-f052-4488-99e4-3f960139783d",
+    "area": "ECOMMERCE",
+    "nome": "BANNER PRINCIPAL",
+    "valor": 12000.0,
+    "observacoes": "INSERÇÃO QUINZENAL"
+  },
+  {
+    "id": "0b1a799f-0c08-41fd-8d49-a5cb2bf87e98",
+    "area": "ECOMMERCE",
+    "nome": "BANNER MONTA QUE DESCONTA",
+    "valor": 10000.0,
+    "observacoes": "INSERÇÃO SEMANAL"
+  },
+  {
+    "id": "a5b6ba23-78b5-4e1f-81eb-734f3f4c0e3c",
+    "area": "ECOMMERCE",
+    "nome": "BANNER ENTRE VITRINES",
+    "valor": 12000.0,
+    "observacoes": "INSERÇÃO QUINZENAL"
+  },
+  {
+    "id": "62fd28f6-1d44-4ced-8ef9-4d3409d2d08b",
+    "area": "ECOMMERCE",
+    "nome": "BANNER MINI CATEGORIA",
+    "valor": 2800.0,
+    "observacoes": "INSERÇÃO SEMANAL"
+  },
+  {
+    "id": "36061e0b-b61c-487e-9bb8-43b1c84b5690",
+    "area": "ECOMMERCE",
+    "nome": "BANNER CARROSSEL",
+    "valor": 5300.0,
+    "observacoes": "INSERÇÃO SEMANAL"
+  },
+  {
+    "id": "367a531c-53f6-48c3-8bc6-deb04c6f9ca6",
+    "area": "ECOMMERCE",
+    "nome": "BANNER CATEGORIA",
+    "valor": 10000.0,
+    "observacoes": "INSERÇÃO QUINZENAL"
+  },
+  {
+    "id": "3461d4f0-0769-42d3-8fae-75355a62630f",
+    "area": "ECOMMERCE",
+    "nome": "BANNER MARCA RODAPÉ",
+    "valor": 1000.0,
+    "observacoes": "INSERÇÃO MENSAL"
+  },
+  {
+    "id": "d35302a1-b511-4cda-879c-2cac01031165",
+    "area": "ECOMMERCE",
+    "nome": "BANNER NOVIDADES",
+    "valor": 2800.0,
+    "observacoes": "INSERÇÃO SEMANAL"
+  },
+  {
+    "id": "4441ef78-809d-4275-a445-5cf2fe7d783c",
+    "area": "ECOMMERCE",
+    "nome": "VÍDEO SHOPPING ADS",
+    "valor": 12000.0,
+    "observacoes": "INSERÇÃO SEMANAL"
+  },
+  {
+    "id": "555f12fa-3efc-44c3-8045-12729c3c797b",
+    "area": "ECOMMERCE",
+    "nome": "VITRINES PATROCINADAS",
+    "valor": 1000.0,
+    "observacoes": "INSERÇÃO SEMANAL"
+  },
+  {
+    "id": "030fddfd-ff9e-4023-8b60-ba8620f843b5",
+    "area": "ECOMMERCE",
+    "nome": "STORIES VIDEOS SHOPPING",
+    "valor": 12000.0,
+    "observacoes": "INSERÇÃO MENSAL"
+  },
+  {
+    "id": "9a9d4024-4f7a-4dd6-b4fc-f1bce8f72cc1",
+    "area": "ECOMMERCE",
+    "nome": "VITRINE EXCLUSIVA DA MARCA",
+    "valor": 10000.0,
+    "observacoes": "INSERÇÃO SEMANAL"
+  },
+  {
+    "id": "c3064e08-fd5a-4620-b712-19a310a269a7",
+    "area": "ECOMMERCE",
+    "nome": "PRIORIZAÇÃO EM RESULTADO",
+    "valor": 3200.0,
+    "observacoes": "INSERÇÃO SEMANAL"
+  },
+  {
+    "id": "00f85665-548d-49e2-b26c-3b1d294fa7b0",
+    "area": "ECOMMERCE",
+    "nome": "LADING PAGE POR MARCA",
+    "valor": 25000.0,
+    "observacoes": "INSERÇÃO MENSAL"
+  },
+  {
+    "id": "7ac0361c-0013-425c-b6d3-99bfa796290f",
+    "area": "ECOMMERCE",
+    "nome": "BANNER PALAVRA-CHAVE",
+    "valor": 6400.0,
+    "observacoes": "INSERÇÃO QUINZENAL"
+  },
+  {
+    "id": "6f8ee4f8-bdf5-4860-a3ef-225b7634b8a5",
+    "area": "ECOMMERCE",
+    "nome": "BANNER LINK BUSCA",
+    "valor": 2500.0,
+    "observacoes": "INSERÇÃO MENSAL"
+  },
+  {
+    "id": "c96d0c95-570c-47d0-a0f7-65791d4fbbab",
+    "area": "ECOMMERCE",
+    "nome": "ESPAÇO ENTRE VITRINES SEGMENTADAS",
+    "valor": 1500.0,
+    "observacoes": "INSERÇÃO SEMANAL"
+  },
+  {
+    "id": "edd08b4e-f9f5-42ad-89ab-53b8bb800efb",
+    "area": "ECOMMERCE",
+    "nome": "ESPAÇO ENTRE VITRINES SEGMENTADAS CHECKOUT",
+    "valor": 1500.0,
+    "observacoes": "INSERÇÃO SEMANAL"
+  },
+  {
+    "id": "cfe361a5-fccf-4270-83eb-42de27e4d096",
+    "area": "ECOMMERCE",
+    "nome": "ALERTA EM NAVEGAÇÃO SITE",
+    "valor": 5300.0,
+    "observacoes": "INSERÇÃO SEMANAL"
+  },
+  {
+    "id": "a6699ce5-2f0e-4b12-a721-22ccc7fe34fe",
+    "area": "ECOMMERCE",
+    "nome": "CUPONS ESPAÇO VITRINES E PÁGINA",
+    "valor": 12000.0,
+    "observacoes": "INSERÇÃO QUINZENAL"
+  },
+  {
+    "id": "d2e22b80-5981-456b-a15b-3ef5a931dc49",
+    "area": "ECOMMERCE",
+    "nome": "LIVE COMMERCE PRODUTO DESTAQUE",
+    "valor": 12000.0,
+    "observacoes": "DIA"
+  },
+  {
+    "id": "8a01a130-0954-4085-bca1-9860e65dc0a7",
+    "area": "ECOMMERCE",
+    "nome": "LIVE COMMERCE EXCLUSIVA",
+    "valor": 60000.0,
+    "observacoes": "DIA"
+  },
+  {
+    "id": "43946aba-8801-4abe-97cc-b1c49196d83f",
+    "area": "ECOMMERCE",
+    "nome": "MÍDIA TIKTOK ADS DARKPOST",
+    "valor": 4000.0,
+    "observacoes": "INSERÇÃO QUINZENAL"
+  },
+  {
+    "id": "52cb662f-025f-4220-8dff-81bbe28cea15",
+    "area": "ECOMMERCE",
+    "nome": "MÍDIA GOOGLE SHOPPING ADS",
+    "valor": 8000.0,
+    "observacoes": "INSERÇÃO SEMANAL"
+  },
+  {
+    "id": "fc12b6b5-cd19-466e-95e7-63ff5b8f1b0e",
+    "area": "ECOMMERCE",
+    "nome": "MIDIA META ADS",
+    "valor": 8000.0,
+    "observacoes": "INSERÇÃO QUINZENAL"
+  },
+  {
+    "id": "ad2735b2-5d9e-433d-81d9-4bd0f816b29d",
+    "area": "ECOMMERCE",
+    "nome": "MIDIA GOOGLE PMAX EXCLUSIVA",
+    "valor": 10000.0,
+    "observacoes": "INSERÇÃO SEMANAL"
+  },
+  {
+    "id": "8fe7ed5e-f0cd-4936-9783-86e2b0174f54",
+    "area": "ECOMMERCE",
+    "nome": "IMPULSIONAMENTO DE MIDIA COM INFLUENCERS",
+    "valor": 6000.0,
+    "observacoes": "INSERÇÃO SEMANAL"
+  },
+  {
+    "id": "ea00241c-b3a5-4949-87e5-c6cd025dc2b4",
+    "area": "ECOMMERCE",
+    "nome": "POST FEED IMAGEM",
+    "valor": 5000.0,
+    "observacoes": "DIA"
+  },
+  {
+    "id": "3300900a-8e88-46df-a3a3-bb84e6abce0e",
+    "area": "ECOMMERCE",
+    "nome": "STORY 1 TELA",
+    "valor": 3000.0,
+    "observacoes": "DIA"
+  },
+  {
+    "id": "0e43ddaa-320e-49e8-9f69-01efcba114bb",
+    "area": "ECOMMERCE",
+    "nome": "POST FEED IMAGEM",
+    "valor": 6500.0,
+    "observacoes": "DIA"
+  },
+  {
+    "id": "c9537418-52ee-4210-b137-1548baf22d22",
+    "area": "ECOMMERCE",
+    "nome": "STORY 1 TELA",
+    "valor": 3800.0,
+    "observacoes": "DIA"
+  },
+  {
+    "id": "dd1da7b3-7e02-47ef-b0fd-d84129e3962f",
+    "area": "ECOMMERCE",
+    "nome": "REELS INSTAGRAM E FACEBOOK",
+    "valor": 10000.0,
+    "observacoes": "DIA"
+  },
+  {
+    "id": "2dd4e645-b22b-42f8-a160-e74015217083",
+    "area": "ECOMMERCE",
+    "nome": "ENVIO DE PRESSKIT",
+    "valor": 12500.0,
+    "observacoes": "DIA"
+  },
+  {
+    "id": "ac288a91-441d-4b4c-b7e9-153eb5269bb1",
+    "area": "ECOMMERCE",
+    "nome": "REELS PRODUZIDA PELA INDUSTRIA C/ COLLAB",
+    "valor": 15000.0,
+    "observacoes": "DIA"
+  },
+  {
+    "id": "90882618-f421-4e35-bb2a-487720d74e7b",
+    "area": "ECOMMERCE",
+    "nome": "REELS PRODUZIDA PELA INDUSTRIA S/ COLLAB",
+    "valor": 10000.0,
+    "observacoes": "DIA"
+  },
+  {
+    "id": "c3601f6b-72e6-4ef8-9743-09dbcff602cd",
+    "area": "ECOMMERCE",
+    "nome": "WEB PUSH SEGMENTADO",
+    "valor": 5300.0,
+    "observacoes": "DIA"
+  },
+  {
+    "id": "39106210-7352-40d8-85fd-43714947c856",
+    "area": "ECOMMERCE",
+    "nome": "EMAIL MARKETING DESTAQUE",
+    "valor": 4800.0,
+    "observacoes": "DIA"
+  },
+  {
+    "id": "5cc5d14d-52bf-4ab6-8b2f-59476c0a8cfe",
+    "area": "ECOMMERCE",
+    "nome": "APP PUSH SIMPLES SEGMENTADO",
+    "valor": 10000.0,
+    "observacoes": "DIA"
+  },
+  {
+    "id": "2ea6e127-fead-449a-8892-60f59493ef4b",
+    "area": "ECOMMERCE",
+    "nome": "E-MAIL ONE SHOT EXCLUSIVO",
+    "valor": 12000.0,
+    "observacoes": "DIA"
+  },
+  {
+    "id": "3cbeb25c-f4ec-4e26-b1d8-000355f9a1ca",
+    "area": "ECOMMERCE",
+    "nome": "PUC",
+    "valor": 18000.0,
+    "observacoes": "TRIMESTRAL"
+  },
+  {
+    "id": "acb16726-d975-4045-b866-0f3a3452e952",
+    "area": "ECOMMERCE",
+    "nome": "RÉGUA DE CATEGORIA (RECOMPRA)",
+    "valor": 18000.0,
+    "observacoes": "TRIMESTRAL"
+  },
+  {
+    "id": "31690302-6f04-4465-b4f3-f6f87fd5248d",
+    "area": "ECOMMERCE",
+    "nome": "REGUA JORNADA DE CLIENTES",
+    "valor": 36000.0,
+    "observacoes": "SEMESTRAL"
+  },
+  {
+    "id": "2e3ce193-0139-4866-a312-65b0e669a90a",
+    "area": "ECOMMERCE",
+    "nome": "DISPARO DE SMS",
+    "valor": 2500.0,
+    "observacoes": "DIA"
+  },
+  {
+    "id": "0967a6f6-055a-4fbf-bfa2-e78d804cce2e",
+    "area": "ECOMMERCE",
+    "nome": "DISPARO DE WHATS",
+    "valor": 5000.0,
+    "observacoes": "DIA"
+  },
+  {
+    "id": "004232ff-4372-48f5-96f2-592a6af85d23",
+    "area": "ECOMMERCE",
+    "nome": "ESTUDO DE COMPORTAMENTO DO CLIENTE",
+    "valor": 10000.0,
+    "observacoes": ""
+  },
+  {
+    "id": "ab7cc9c3-65c9-4f32-b6b5-b4638c6a6065",
+    "area": "ECOMMERCE",
+    "nome": "CUPOM DE OFERTAS POR CPF",
+    "valor": 10000.0,
+    "observacoes": "SEMESTRAL"
+  },
+  {
+    "id": "ab43a3dd-0735-4cc6-b35c-3198e5a92a48",
+    "area": "ECOMMERCE",
+    "nome": "WIFI LOJA - BANNER",
+    "valor": 0.0,
+    "observacoes": ""
+  },
+  {
+    "id": "86c6f60b-364e-48f7-8f3d-f39eac090258",
+    "area": "ECOMMERCE",
+    "nome": "CUPOM DE OFERTAS (7 DIAS)",
+    "valor": 18000.0,
+    "observacoes": ""
+  },
+  {
+    "id": "c90006ab-0101-4b65-a65a-aaaac1efcc1b",
+    "area": "ECOMMERCE",
+    "nome": "CUPOM DE OFERTAS (15 DIAS)",
+    "valor": 25000.0,
+    "observacoes": ""
+  },
+  {
+    "id": "8706f0a5-6c50-4307-a40c-0c1c825670ba",
+    "area": "ECOMMERCE",
+    "nome": "CUPOM DE OFERTAS (730DIAS)",
+    "valor": 35000.0,
+    "observacoes": ""
+  },
+  {
+    "id": "0d73e7b2-f883-4949-9187-65edab14abd7",
+    "area": "ECOMMERCE",
+    "nome": "SUPER CAMPANHAS",
+    "valor": 190000.0,
+    "observacoes": "OURO"
+  },
+  {
+    "id": "36f9eb07-4a86-42d9-855d-21b989188c88",
+    "area": "ECOMMERCE",
+    "nome": "SUPER CAMPANHAS",
+    "valor": 750000.0,
+    "observacoes": "DIAMANTE"
+  },
+  {
+    "id": "100ec822-fe03-424a-a26e-3cd5126801db",
+    "area": "ECOMMERCE",
+    "nome": "TEMPORADA DE INVERNO",
+    "valor": 130000.0,
+    "observacoes": ""
+  },
+  {
+    "id": "987220e9-50e3-4693-967e-03c06d956a50",
+    "area": "ECOMMERCE",
+    "nome": "TEMPORADA DE VERÃO",
+    "valor": 130000.0,
+    "observacoes": ""
+  },
+  {
+    "id": "d22cb825-044d-4262-8c1d-9e8aaea601d2",
+    "area": "ECOMMERCE",
+    "nome": "PACOTES PREMIUM",
+    "valor": 1140000.0,
+    "observacoes": "OURO"
+  },
+  {
+    "id": "144cbb2e-2e67-4a58-853e-5ddbaf739bb0",
+    "area": "ECOMMERCE",
+    "nome": "PACOTES PREMIUM",
+    "valor": 540000.0,
+    "observacoes": "PRATA"
+  },
+  {
+    "id": "f85683bc-f9ef-450c-a97e-b256ec31b813",
+    "area": "ECOMMERCE",
+    "nome": "PACOTES PREMIUM",
+    "valor": 300000.0,
+    "observacoes": "BRONZE"
+  },
+  {
+    "id": "5cac033d-1d05-407a-bb79-b6cbe5de22a3",
+    "area": "ECOMMERCE",
+    "nome": "INFLUENCER SELEÇÃO DIAMANTE 1 POST",
+    "valor": 80000.0,
+    "observacoes": "1 POST (INSTA OU TIKTOK)"
+  },
+  {
+    "id": "e5bdd4d8-69dc-4fa1-b167-39d029daab89",
+    "area": "ECOMMERCE",
+    "nome": "INFLUENCER SELEÇÃO DIAMANTE 3 MESES",
+    "valor": 225000.0,
+    "observacoes": "PACOTE 3 MESES (INSTA OU TIK TOK)"
+  },
+  {
+    "id": "7b62c9bb-74ff-4b2f-9806-0b6090b4c9cc",
+    "area": "ECOMMERCE",
+    "nome": "INFLUENCER SELEÇÃO OURO 1 POST",
+    "valor": 45000.0,
+    "observacoes": "1 POST (INSTA OU TIKTOK)"
+  },
+  {
+    "id": "78bf6d9c-1783-4b8d-b3f0-cd4ef2eb0221",
+    "area": "ECOMMERCE",
+    "nome": "INFLUENCER SELEÇÃO OURO 3 MESES",
+    "valor": 114000.0,
+    "observacoes": "PACOTE 3 MESES (INSTA OU TIK TOK)"
+  },
+  {
+    "id": "31d0fd82-e0f6-4620-afcf-3eee20797ded",
+    "area": "ECOMMERCE",
+    "nome": "INFLUENCER SELEÇÃO PRATA 1 POST",
+    "valor": 30000.0,
+    "observacoes": "1 POST (INSTA OU TIKTOK)"
+  },
+  {
+    "id": "e7be2b87-0dd1-47ad-97c9-0a15551b2e4b",
+    "area": "ECOMMERCE",
+    "nome": "INFLUENCER SELEÇÃO PRATA 3 MESES",
+    "valor": 37500.0,
+    "observacoes": "PACOTE 3 MESES (INSTA OU TIK TOK)"
+  },
+  {
+    "id": "1de21a86-576a-4f44-8515-f77e23aad87e",
+    "area": "ECOMMERCE",
+    "nome": "INFLUENCER SELEÇÃO BRONZE",
+    "valor": 15000.0,
+    "observacoes": "1 POST (INSTA OU TIKTOK)"
+  },
+  {
+    "id": "e472a516-4c65-425d-82ba-f17dd432ee8a",
+    "area": "SERVIÇOS FARMACEUTICOS",
+    "nome": "AÇÕES DE SAÚDE EM EVENTOS",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "a1f7f69c-2ca7-4178-9b0b-bf01b09f097a",
+    "area": "SERVIÇOS FARMACEUTICOS",
+    "nome": "PODCAST SÃO JOAO SAUDE",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "2bb219fe-6c88-4fff-87ab-c453f014d6af",
+    "area": "SERVIÇOS FARMACEUTICOS",
+    "nome": "CONEXÃO FARMA",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "b0003696-289e-426b-80ea-ca84fa8f134c",
+    "area": "SERVIÇOS FARMACEUTICOS",
+    "nome": "ENCONTRO IMERSÃO DE MULTIPLICADORES",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "16da5e17-67a1-4fb2-9d0c-ee0c188d9515",
+    "area": "SERVIÇOS FARMACEUTICOS",
+    "nome": "CONVENÇÃO CONEXÃO FARMA",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "91a54ec5-bb4f-45e5-98bf-b21ecfb9a5d9",
+    "area": "SERVIÇOS FARMACEUTICOS",
+    "nome": "OFICINA DE VACINAS",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "684662e4-14fe-48e3-9e99-fd4ea41fe06f",
+    "area": "SERVIÇOS FARMACEUTICOS",
+    "nome": "DIVULGAÇÃO DE SERVIÇOS CLINICOS",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "534d5740-511a-4f29-ae1f-3f56f4a706f4",
+    "area": "SERVIÇOS FARMACEUTICOS",
+    "nome": "PATROCÍNIO CIENTIFICO",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "9f4fc991-12e1-42fb-acef-280cf19e3575",
+    "area": "SERVIÇOS FARMACEUTICOS",
+    "nome": "VISITAÇÃO MEDICA",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "f5d2f9cd-53cb-430c-8dbe-647c4f688422",
+    "area": "SERVIÇOS FARMACEUTICOS",
+    "nome": "AMBIENTAÇÃO DA SALA DE VACINAS",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "54e33b7b-c24f-47a0-93b9-87a5c9122bdc",
+    "area": "SERVIÇOS FARMACEUTICOS",
+    "nome": "PATROCINIO PARA SEMANAS ACADEMICAS",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "134651e0-90b0-432e-927a-54d07e8e5d49",
+    "area": "SERVIÇOS FARMACEUTICOS",
+    "nome": "AMBIENTAÇÃO PAINEL SALA DE SERVIÇOS",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "df7d15b9-30e8-4ab8-81ed-2324ebf94784",
+    "area": "SERVIÇOS FARMACEUTICOS",
+    "nome": "SUPORTE FARMACÊUTICO",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "6876bb64-8046-461f-a85a-3c96585a737c",
+    "area": "TREINAMENTOS",
+    "nome": "TREINAMENTO FARMACEUTICO",
+    "valor": 15000.0,
+    "observacoes": ""
+  },
+  {
+    "id": "74970da2-d631-48c3-aa87-7905a5ed08bc",
+    "area": "TREINAMENTOS",
+    "nome": "PLATAFORMA DNA",
+    "valor": 10000.0,
+    "observacoes": ""
+  },
+  {
+    "id": "6bbb3c84-773d-4fb1-a81b-fb8f93ef1713",
+    "area": "TREINAMENTOS",
+    "nome": "AÇÕES DE ENDOMARKETING",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "ed7ceef2-d876-4c00-8b4b-632a59bba88a",
+    "area": "TREINAMENTOS",
+    "nome": "TREINAMENTO PRESENCIAL",
+    "valor": 20000.0,
+    "observacoes": ""
+  },
+  {
+    "id": "be61f5ae-5abf-4bcd-a27d-a981aa96c06a",
+    "area": "TREINAMENTOS",
+    "nome": "CONVENÇÃO DE VENDAS",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "3bbae310-f2ef-48f7-abe5-823ee9410e19",
+    "area": "EVENTOS",
+    "nome": "CORRIDA DA SAÚDE",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "052bcde5-559e-4b76-ad21-135e70677810",
+    "area": "EVENTOS",
+    "nome": "ESTAÇÃO VERÃO",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "b4a5c84f-d2d0-4c9d-8a3f-844c573542ca",
+    "area": "PROMOCIONAL",
+    "nome": "UNIFORMES",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  },
+  {
+    "id": "7d236afd-8bf8-48b1-842d-8833db7c5101",
+    "area": "PROMOCIONAL",
+    "nome": "AÇÃO EM LOJA",
+    "valor": 1000.0,
+    "observacoes": ""
+  },
+  {
+    "id": "605f4bd5-193c-40b0-b851-95af1a0b0ce4",
+    "area": "PROMOCIONAL",
+    "nome": "AGENDA",
+    "valor": 0.0,
+    "observacoes": "Sob consulta"
+  }
+]
