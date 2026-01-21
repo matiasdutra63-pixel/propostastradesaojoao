@@ -80,22 +80,45 @@ export default function NovaPropostaPage() {
   // máscara para valor digitado (sob consulta) por linha
   const [valorMask, setValorMask] = useState<Record<string, string>>({});
 
-  // ✅ controle de "alterações não salvas"
+  // ✅ controle de "alterações não salvas" (AJUSTADO PARA VERCEL / SSR)
   const [dirty, setDirty] = useState(false);
+  const [hydrated, setHydrated] = useState(false);
+
   const markDirty = () => {
     setDirty(true);
-    sessionStorage.setItem("dirty_proposta", "1");
+    if (typeof window !== "undefined") {
+      try {
+        sessionStorage.setItem("dirty_proposta", "1");
+      } catch {}
+    }
   };
+
   const clearDirty = () => {
     setDirty(false);
-    sessionStorage.removeItem("dirty_proposta");
+    if (typeof window !== "undefined") {
+      try {
+        sessionStorage.removeItem("dirty_proposta");
+      } catch {}
+    }
   };
+
+  // ✅ lê sessionStorage somente no browser
+  useEffect(() => {
+    setHydrated(true);
+    if (typeof window === "undefined") return;
+
+    try {
+      const isDirty = sessionStorage.getItem("dirty_proposta") === "1";
+      if (isDirty) setDirty(true);
+    } catch {}
+  }, []);
 
   // ✅ avisa ao fechar/atualizar a aba se houver mudanças não salvas
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
     const onBeforeUnload = (e: BeforeUnloadEvent) => {
-      const isDirty = dirty || sessionStorage.getItem("dirty_proposta") === "1";
-      if (!isDirty) return;
+      if (!dirty) return;
       e.preventDefault();
       e.returnValue = "";
     };
@@ -105,6 +128,8 @@ export default function NovaPropostaPage() {
   }, [dirty]);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
     const logado = localStorage.getItem("logado") === "true";
     if (!logado) {
       router.replace("/login");
@@ -325,7 +350,6 @@ export default function NovaPropostaPage() {
       localStorage.getItem("propostas") || "[]"
     );
 
-    // garante que valorFinal está atualizado
     const acoesNormalizadas = acoesProposta.map((a) => {
       const atualizado: AcaoProposta = {
         ...a,
@@ -688,7 +712,7 @@ export default function NovaPropostaPage() {
             placeholder="Ex: Nivea"
             className="mt-2 w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-          {(dirty || sessionStorage.getItem("dirty_proposta") === "1") && (
+          {hydrated && dirty && (
             <div className="mt-2 text-xs text-amber-700 font-semibold">
               Você tem alterações não salvas.
             </div>
